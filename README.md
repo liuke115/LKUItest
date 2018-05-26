@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # animationvue
 
 > A Vue.js project
@@ -19,3 +20,7 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# LKUItest
+Just a Test of vue
+>>>>>>> 4722da3c05b59f96ecd29cc377578c49f9ddb804
