@@ -14,7 +14,7 @@
         name: "socketPage",
         data(){
             return{
-                socket:null
+                socket: null
             }
         },
         methods:{
@@ -22,24 +22,32 @@
                 this.$router.push({path: '/'})
             },
             linkTo(){
-                let linked = io('http://192.168.199.231:9527?token=3778fe88-e71d-4004-86bc-3188f7fd450b&pingInterval=60000&pingTimeout=90000',{
+                this.socket = io('http://192.168.199.231:9527?token=3778fe88-e71d-4004-86bc-3188f7fd450b&pingInterval=60000&pingTimeout=90000',{
                     transports: ['websocket'],
                     // interval: 60000,
                     'connect_timeout': 90000
                 })
-               this.socket = linked
-                linked.on('connect',function () {
-                    console.log('连上了！')
-                })
-                linked.on('msg',function (data) {
-                    console.log(data)
-                })
-                linked.on('disconnect',function () {
-                    console.log('断开了')
-                })
+                this.socketConnected()
+                this.socketDisconnect()
+                this.socketMsg()
             },
             unlinkTo(){
                this.socket.disconnect()
+            },
+            socketConnected(){
+                this.socket.on('connect',function () {
+                    console.log('连上了')
+                })
+            },
+            socketDisconnect(){
+                this.socket.on('disconnect',function () {
+                    console.log('断开了!')
+                })
+            },
+            socketMsg(){
+                this.socket.on('msg',function (data) {
+                    console.log(data)
+                })
             }
         }
     }
