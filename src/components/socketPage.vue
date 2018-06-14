@@ -22,11 +22,13 @@
                 this.$router.push({path: '/'})
             },
             linkTo(){
-                this.socket = io('http://192.168.199.231:9527?token=3778fe88-e71d-4004-86bc-3188f7fd450b',{
-                    transports: ['websocket'],
-                    // interval: 60000,
-                    'connect_timeout': 90000
-                })
+                    // this.socket = io('wss://socketio-slack-count.now.sh/socket.io/?EIO=3&transport=websocket&sid=w87hvvqIE89e_gOFJwmm')
+                    this.socket = io('wss://socketio-slack-count.now.sh/')
+                // this.socket = io('http://192.168.199.231:9527?token=3778fe88-e71d-4004-86bc-3188f7fd450b',{
+                //     transports: ['websocket'],
+                //     // interval: 60000,
+                //     'connect_timeout': 90000
+                // })
                 this.socketConnected()
                 this.socketDisconnect()
                 this.socketMsg()
