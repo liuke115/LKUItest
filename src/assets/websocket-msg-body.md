@@ -29,15 +29,15 @@
 
 ```javascript
 {
-    "id": "", 
-    "userId": [ 
+    "id": "",
+    "userId": [
         "0001"
     ],
-    "createTime": "2018-05-29 15:37:39", 
-    "type": "GISTACK_LICENCE_EXPIRED", 
+    "createTime": "2018-05-29 15:37:39",
+    "type": "GISTACK_LICENCE_EXPIRED",
     "msg": {
-        "expireDate": "2018-05-29 15:37:39", 
-        "timeLeft": 10,             
+        "expireDate": "2018-05-29 15:37:39",
+        "timeLeft": 10,
      }
 }
 ```
@@ -103,7 +103,7 @@
 
   普通管理员登录后检查其租用的站点ArcGIS 授权是否快到期，消息体如下:
 
-  
+
 
   ```javascript
   {
@@ -112,11 +112,11 @@
       ],
       "createTime": "2018-06-12 14:55:28",
       "type": "NORMAL_USER_SITE_AGS_LICENSE_EXPIRED ",
-      "msg": [ 
+      "msg": [
           {
               "expireDate": "2018-06-12 14:55:28",
               "timeLeft": 10,
-              "resourceName": "test-10.6.1" 
+              "resourceName": "test-10.6.1"
           },
           {
               "expireDate": "2018-06-12 14:55:28",
@@ -127,7 +127,7 @@
   }
   ```
 
-  
+
 
 - NORMAL_USER_DESKTOP_LEASE_EXPIRED 普通用户租用云桌面授权快到期提醒，消息体如下：
 
@@ -138,11 +138,11 @@
       ],
       "createTime": "2018-06-12 14:55:28",
       "type": "NORMAL_USER_DESKTOP_LEASE_EXPIRED",
-      "msg": [ 
+      "msg": [
           {
               "expireDate": "2018-06-12 14:55:28",
               "timeLeft": 10,
-              "resourceName": "test-10.6.1" 
+              "resourceName": "test-10.6.1"
           },
           {
               "expireDate": "2018-06-12 14:55:28",
@@ -172,7 +172,7 @@
      }
      ```
 
-     
+
 
 - GCLOUD_WEBSITE_APPROVE_REQUEST  云站点申请审批事件
 
@@ -187,7 +187,7 @@
 
   消息体如下：
 
-  
+
 
   ```javascript
   {
@@ -208,7 +208,7 @@
   GCLOUD_WEBSITE_RENEW_APPROVE_REQUEST_REJECT 云站点续租申请驳回
 
   GCLOUD_DESKTOP_APPROVE_REQUEST_PASS 云桌面申请通过
-  GCLOUD_DESKTOP_APPROVE_REQUEST_REJECT云桌面申请驳回
+  GCLOUD_DESKTOP_APPROVE_REQUEST_REJECT 云桌面申请驳回
 
   GCLOUD_DESKTOP_RENEW_APPROVE_REQUEST_PASSED 云桌面续租申请通过
    GCLOUD_DESKTOP_RENEW_APPROVE_REQUEST_REJECT 云桌面续住申请驳回
@@ -217,7 +217,7 @@
 
   消息体如下 ：
 
-  
+
 
   ```javascript
   {
@@ -230,4 +230,3 @@
   }
   ```
 
-  

@@ -22,7 +22,7 @@
                 this.$router.push({path: '/'})
             },
             linkTo(){
-                this.socket = io('http://192.168.199.231:9527?token=3778fe88-e71d-4004-86bc-3188f7fd450b&pingInterval=60000&pingTimeout=90000',{
+                this.socket = io('http://192.168.199.231:9527?token=3778fe88-e71d-4004-86bc-3188f7fd450b',{
                     transports: ['websocket'],
                     // interval: 60000,
                     'connect_timeout': 90000
